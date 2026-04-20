@@ -41,7 +41,7 @@ export const products: Product[] = [
     description: "Pastilha de freio original para BMW Série 3 e Série 5. Alta durabilidade e performance.",
     price: "R$ 489,90",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop",
-    mercadoLivreUrl: "https://www.mercadolivre.com.br",
+    mercadoLivreUrl: "https://www.mercadolivre.com.br/pagina/shark_parts#client=SEARCH&component_id=menu_home&component=menu_home&label=In%C3%ADcio&tracking_id=94e16b1246af8a0b83a00fd86914d228&global_position=1",
   },
   {
     id: "2",
