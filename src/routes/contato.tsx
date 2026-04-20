@@ -1,12 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 
+const ML_URL = "https://www.mercadolivre.com.br/pagina/shark_parts#client=SEARCH&component_id=menu_home&component=menu_home&label=In%C3%ADcio&tracking_id=94e16b1246af8a0b83a00fd86914d228&global_position=1";
+const INSTAGRAM_URL = "https://www.instagram.com/sharkparts__/";
+
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato — AutoParts Premium" },
-      { name: "description", content: "Entre em contato com a AutoParts Premium. WhatsApp e Mercado Livre." },
-      { property: "og:title", content: "Contato — AutoParts Premium" },
+      { title: "Contato — Shark Parts" },
+      { name: "description", content: "Entre em contato com a Shark Parts. WhatsApp, Instagram e Mercado Livre." },
+      { property: "og:title", content: "Contato — Shark Parts" },
       { property: "og:description", content: "Faça seu pedido pelo WhatsApp ou Mercado Livre." },
     ],
   }),
@@ -23,7 +26,7 @@ function ContatoPage() {
       >
         <h1 className="font-display text-4xl font-bold text-foreground">Faça seu <span className="text-primary">Pedido</span></h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          Entre em contato conosco pelo WhatsApp para atendimento personalizado ou visite nossa loja no Mercado Livre.
+          Entre em contato conosco pelo WhatsApp para atendimento personalizado, siga-nos no Instagram ou visite nossa loja no Mercado Livre.
         </p>
 
         <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -37,7 +40,16 @@ function ContatoPage() {
             Falar no WhatsApp
           </a>
           <a
-            href="https://www.mercadolivre.com.br"
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-[oklch(0.55_0.25_330)] via-[oklch(0.55_0.25_25)] to-[oklch(0.70_0.20_60)] px-8 py-4 text-base font-semibold text-foreground transition-opacity hover:opacity-90"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Seguir no Instagram
+          </a>
+          <a
+            href={ML_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
@@ -49,7 +61,7 @@ function ContatoPage() {
 
         <div className="mt-16 grid gap-6 sm:grid-cols-3">
           {[
-            { title: "WhatsApp", desc: "(11) 99999-9999", icon: "📱" },
+            { title: "WhatsApp", desc: "A definir", icon: "📱" },
             { title: "Horário", desc: "Seg-Sex, 9h às 18h", icon: "🕐" },
             { title: "Entrega", desc: "Todo o Brasil", icon: "📦" },
           ].map((item) => (

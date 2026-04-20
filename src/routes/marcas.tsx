@@ -6,9 +6,9 @@ import { BrandCard } from "@/components/BrandCard";
 export const Route = createFileRoute("/marcas")({
   head: () => ({
     meta: [
-      { title: "Marcas — AutoParts Premium" },
+      { title: "Marcas — Shark Parts" },
       { name: "description", content: "Peças para BMW, Porsche, Land Rover e Mercedes-Benz." },
-      { property: "og:title", content: "Marcas — AutoParts Premium" },
+      { property: "og:title", content: "Marcas — Shark Parts" },
       { property: "og:description", content: "Peças para as principais marcas premium." },
     ],
   }),
