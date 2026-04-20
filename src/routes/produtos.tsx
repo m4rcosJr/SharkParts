@@ -12,9 +12,9 @@ export const Route = createFileRoute("/produtos")({
   }),
   head: () => ({
     meta: [
-      { title: "Produtos — AutoParts Premium" },
+      { title: "Produtos — Shark Parts" },
       { name: "description", content: "Catálogo de peças automotivas premium para BMW, Porsche, Land Rover e Mercedes-Benz." },
-      { property: "og:title", content: "Produtos — AutoParts Premium" },
+      { property: "og:title", content: "Produtos — Shark Parts" },
       { property: "og:description", content: "Confira nosso catálogo de peças automotivas premium." },
     ],
   }),

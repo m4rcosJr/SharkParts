@@ -5,12 +5,14 @@ import { brands, products } from "@/lib/products";
 import { BrandCard } from "@/components/BrandCard";
 import { ProductCard } from "@/components/ProductCard";
 
+const ML_URL = "https://www.mercadolivre.com.br/pagina/shark_parts#client=SEARCH&component_id=menu_home&component=menu_home&label=In%C3%ADcio&tracking_id=94e16b1246af8a0b83a00fd86914d228&global_position=1";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AutoParts Premium — Peças para Veículos de Luxo" },
+      { title: "Shark Parts — Peças para Veículos de Luxo" },
       { name: "description", content: "Peças originais e importadas para BMW, Porsche, Land Rover e Mercedes-Benz. Qualidade e procedência garantidas." },
-      { property: "og:title", content: "AutoParts Premium — Peças para Veículos de Luxo" },
+      { property: "og:title", content: "Shark Parts — Peças para Veículos de Luxo" },
       { property: "og:description", content: "Peças originais e importadas para BMW, Porsche, Land Rover e Mercedes-Benz." },
     ],
   }),
@@ -149,7 +151,7 @@ function HomePage() {
               Falar no WhatsApp
             </a>
             <a
-              href="https://www.mercadolivre.com.br"
+              href={ML_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"

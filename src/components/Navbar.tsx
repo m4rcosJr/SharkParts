@@ -1,6 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo.jpg";
 
 const navItems = [
   { label: "Início", to: "/" as const },
@@ -18,11 +19,9 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary">
-            <span className="font-display text-lg font-bold text-primary-foreground">AP</span>
-          </div>
+          <img src={logo} alt="Shark Parts" className="h-9 w-9 rounded-md object-cover" />
           <span className="font-display text-lg font-semibold tracking-tight text-foreground">
-            AutoParts<span className="text-primary">Premium</span>
+            Shark<span className="text-primary">Parts</span>
           </span>
         </Link>
 

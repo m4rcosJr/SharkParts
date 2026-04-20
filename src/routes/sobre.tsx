@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre — AutoParts Premium" },
-      { name: "description", content: "Conheça a AutoParts Premium. Especialistas em peças para BMW, Porsche, Land Rover e Mercedes-Benz." },
-      { property: "og:title", content: "Sobre — AutoParts Premium" },
+      { title: "Sobre — Shark Parts" },
+      { name: "description", content: "Conheça a Shark Parts. Especialistas em peças para BMW, Porsche, Land Rover e Mercedes-Benz." },
+      { property: "og:title", content: "Sobre — Shark Parts" },
       { property: "og:description", content: "Especialistas em peças para veículos premium." },
     ],
   }),
@@ -28,7 +28,7 @@ function SobrePage() {
         animate={{ opacity: 1, y: 0 }}
         className="mx-auto max-w-3xl text-center"
       >
-        <h1 className="font-display text-4xl font-bold text-foreground">Sobre a <span className="text-primary">AutoParts Premium</span></h1>
+        <h1 className="font-display text-4xl font-bold text-foreground">Sobre a <span className="text-primary">Shark Parts</span></h1>
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
           Somos especializados na venda de peças originais e importadas para veículos premium. 
           Nosso compromisso é oferecer qualidade, procedência e atendimento técnico especializado 
