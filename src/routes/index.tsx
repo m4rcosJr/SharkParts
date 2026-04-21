@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
-import { brands, products } from "@/lib/products";
+import { brands } from "@/lib/products";
+import { getProducts } from "@/lib/productStore";
 import { BrandCard } from "@/components/BrandCard";
 import { ProductCard } from "@/components/ProductCard";
 
@@ -20,7 +21,7 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
-  const featured = products.slice(0, 4);
+  const featured = getProducts().slice(0, 4);
 
   return (
     <div>
@@ -142,7 +143,7 @@ function HomePage() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5519988107422"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-[oklch(0.55_0.17_145)] px-6 py-3 text-sm font-semibold text-foreground transition-opacity hover:opacity-90"
