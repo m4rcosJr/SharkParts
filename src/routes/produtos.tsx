@@ -1,7 +1,8 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion } from "framer-motion";
-import { products, brands, type Brand } from "@/lib/products";
+import { brands, type Brand } from "@/lib/products";
+import { getProducts } from "@/lib/productStore";
 import { ProductCard } from "@/components/ProductCard";
 
 type ProdutosSearch = { marca?: string };
@@ -25,6 +26,11 @@ function ProdutosPage() {
   const { marca } = Route.useSearch();
   const navigate = useNavigate({ from: "/produtos" });
   const [search, setSearch] = useState("");
+  const [products, setProducts] = useState(() => getProducts());
+
+  useEffect(() => {
+    setProducts(getProducts());
+  }, []);
 
   const activeBrand = marca as Brand | undefined;
 
@@ -34,7 +40,7 @@ function ProdutosPage() {
       const matchSearch = !search || p.name.toLowerCase().includes(search.toLowerCase()) || p.description.toLowerCase().includes(search.toLowerCase());
       return matchBrand && matchSearch;
     });
-  }, [activeBrand, search]);
+  }, [activeBrand, search, products]);
 
   return (
     <div className="mx-auto max-w-7xl px-4 pt-32 pb-24 sm:px-6 lg:px-8">
@@ -43,7 +49,6 @@ function ProdutosPage() {
         <p className="mt-3 text-muted-foreground">Encontre a peça ideal para o seu veículo premium</p>
       </motion.div>
 
-      {/* Filters */}
       <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
         <div className="relative flex-1">
           <svg className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -74,7 +79,6 @@ function ProdutosPage() {
         </div>
       </div>
 
-      {/* Products Grid */}
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {filtered.map((product, i) => (
           <motion.div

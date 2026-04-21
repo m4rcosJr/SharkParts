@@ -142,7 +142,7 @@ function HomePage() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5519988107422"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-[oklch(0.55_0.17_145)] px-6 py-3 text-sm font-semibold text-foreground transition-opacity hover:opacity-90"
