@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { Smartphone, Mail, Package } from "lucide-react";
 
 const ML_URL = "https://www.mercadolivre.com.br/pagina/shark_parts#client=SEARCH&component_id=menu_home&component=menu_home&label=In%C3%ADcio&tracking_id=94e16b1246af8a0b83a00fd86914d228&global_position=1";
 const INSTAGRAM_URL = "https://www.instagram.com/sharkparts__/";
@@ -62,12 +63,14 @@ function ContatoPage() {
 
         <div className="mt-16 grid gap-6 sm:grid-cols-3">
           {[
-            { title: "WhatsApp", desc: "(19) 98810-7422", icon: "📱" },
-            { title: "Email", desc: "sharkparts25@gmail.com", icon: "📧" },
-            { title: "Entrega", desc: "Todo o Brasil", icon: "📦" },
+            { title: "WhatsApp", desc: "(19) 98810-7422", icon: Smartphone },
+            { title: "Email", desc: "sharkparts25@gmail.com", icon: Mail },
+            { title: "Entrega", desc: "Todo o Brasil", icon: Package },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-border/50 bg-card p-6 text-center">
-              <div className="text-2xl">{item.icon}</div>
+              <div className="flex justify-center">
+                <item.icon className="h-8 w-8 text-primary" />
+              </div>
               <h3 className="mt-3 font-display font-semibold text-foreground">{item.title}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{item.desc}</p>
             </div>
