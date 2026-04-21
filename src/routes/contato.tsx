@@ -63,12 +63,14 @@ function ContatoPage() {
 
         <div className="mt-16 grid gap-6 sm:grid-cols-3">
           {[
-            { title: "WhatsApp", desc: "(19) 98810-7422", icon: "📱" },
-            { title: "Email", desc: "sharkparts25@gmail.com", icon: "📧" },
-            { title: "Entrega", desc: "Todo o Brasil", icon: "📦" },
+            { title: "WhatsApp", desc: "(19) 98810-7422", icon: Smartphone },
+            { title: "Email", desc: "sharkparts25@gmail.com", icon: Mail },
+            { title: "Entrega", desc: "Todo o Brasil", icon: Package },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-border/50 bg-card p-6 text-center">
-              <div className="text-2xl">{item.icon}</div>
+              <div className="flex justify-center">
+                <item.icon className="h-8 w-8 text-primary" />
+              </div>
               <h3 className="mt-3 font-display font-semibold text-foreground">{item.title}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{item.desc}</p>
             </div>
