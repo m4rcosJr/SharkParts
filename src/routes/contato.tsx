@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { Smartphone, Mail, Package } from "lucide-react";
 
 const ML_URL = "https://www.mercadolivre.com.br/pagina/shark_parts#client=SEARCH&component_id=menu_home&component=menu_home&label=In%C3%ADcio&tracking_id=94e16b1246af8a0b83a00fd86914d228&global_position=1";
 const INSTAGRAM_URL = "https://www.instagram.com/sharkparts__/";
