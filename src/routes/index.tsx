@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
-import { brands, products } from "@/lib/products";
+import { brands } from "@/lib/products";
+import { getProducts } from "@/lib/productStore";
 import { BrandCard } from "@/components/BrandCard";
 import { ProductCard } from "@/components/ProductCard";
 
@@ -20,7 +21,7 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
-  const featured = products.slice(0, 4);
+  const featured = getProducts().slice(0, 4);
 
   return (
     <div>
