@@ -1,40 +1,58 @@
 import { Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.jpg";
 
-const ML_URL = "https://www.mercadolivre.com.br/pagina/shark_parts#client=SEARCH&component_id=menu_home&component=menu_home&label=In%C3%ADcio&tracking_id=94e16b1246af8a0b83a00fd86914d228&global_position=1";
 const INSTAGRAM_URL = "https://www.instagram.com/sharkparts__/";
+const WHATSAPP_URL = "https://wa.me/5519988107422";
 
 export function Footer() {
   return (
     <footer className="border-t border-border/50 bg-background">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-6 text-center">
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Shark Parts" className="h-8 w-8 rounded-md object-cover" />
-            <span className="font-display text-base font-semibold text-foreground">
-              Shark<span className="text-primary">Parts</span>
-            </span>
-          </Link>
-          <p className="max-w-md text-sm text-muted-foreground">
-            Peças originais e importadas para veículos premium. BMW, Porsche, Land Rover e Mercedes-Benz.
-          </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
-            <Link to="/sobre" className="transition-colors hover:text-foreground">Sobre</Link>
-            <Link to="/marcas" className="transition-colors hover:text-foreground">Marcas</Link>
-            <Link to="/produtos" className="transition-colors hover:text-foreground">Produtos</Link>
-            <Link to="/contato" className="transition-colors hover:text-foreground">Contato</Link>
+        <div className="grid gap-10 md:grid-cols-3">
+          <div>
+            <Link to="/" className="flex items-center gap-2">
+              <img src={logo} alt="Shark Parts" className="h-9 w-9 rounded-md object-cover" />
+              <span className="font-display text-lg font-semibold text-foreground">
+                Shark<span className="text-primary">Parts</span>
+              </span>
+            </Link>
+            <p className="mt-4 max-w-sm text-sm text-muted-foreground">
+              Peças premium para veículos importados com procedência garantida. BMW, Porsche, Land Rover e Mercedes-Benz.
+            </p>
           </div>
-          <div className="flex items-center gap-4">
-            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-primary" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href={ML_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-primary" aria-label="Mercado Livre">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-            </a>
+
+          <div>
+            <h4 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-foreground">Navegação</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><a href="#inicio" className="transition-colors hover:text-foreground">Início</a></li>
+              <li><a href="#sobre" className="transition-colors hover:text-foreground">Sobre</a></li>
+              <li><a href="#servicos" className="transition-colors hover:text-foreground">Peças</a></li>
+              <li><a href="#marcas" className="transition-colors hover:text-foreground">Marcas</a></li>
+              <li><a href="#contato" className="transition-colors hover:text-foreground">Contato</a></li>
+            </ul>
           </div>
-          <div className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Shark Parts. Todos os direitos reservados.
+
+          <div>
+            <h4 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-foreground">Contato</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>📧 sharkparts25@gmail.com</li>
+              <li>📱 +55 19 98810-7422</li>
+              <li className="pt-2">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:underline">
+                  Falar no WhatsApp →
+                </a>
+              </li>
+              <li>
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-foreground">
+                  Instagram @sharkparts__
+                </a>
+              </li>
+            </ul>
           </div>
+        </div>
+
+        <div className="mt-10 border-t border-border/50 pt-6 text-center text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Shark Parts. Todos os direitos reservados.
         </div>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 import appCss from "../styles.css?url";
 
@@ -68,6 +69,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 }
