@@ -64,9 +64,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Shark Parts — Peças Premium para Importados" },
-      { name: "description", content: "Peças originais e importadas para BMW, Porsche, Land Rover, Mercedes-Benz, Volvo e Audi. Procedência garantida e entrega nacional." },
+      { name: "description", content: "Peças originais e importadas para BMW, Porsche, Land Rover, Mercedes-Benz, Volvo, Audi, Mini e Jaguar. Procedência garantida e entrega nacional." },
       { property: "og:title", content: "Shark Parts — Peças Premium para Importados" },
-      { property: "og:description", content: "Peças originais para BMW, Porsche, Land Rover, Mercedes-Benz, Volvo e Audi." },
+      { property: "og:description", content: "Peças originais para BMW, Porsche, Land Rover, Mercedes-Benz, Volvo, Audi, Mini e Jaguar." },
     ],
   }),
   component: HomePage,
@@ -130,7 +130,7 @@ function HomePage() {
               Peças <span className="text-primary">premium</span> para veículos importados
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Especialistas em BMW, Porsche, Land Rover, Mercedes-Benz, Volvo e Audi. Atendimento personalizado e entrega para todo o Brasil.
+              Especialistas em BMW, Porsche, Land Rover, Mercedes-Benz, Volvo, Audi, Mini e Jaguar. Atendimento personalizado e entrega para todo o Brasil.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a
@@ -304,7 +304,7 @@ function HomePage() {
               A Shark Parts nasceu da paixão por carros importados. Reunimos uma equipe de especialistas e parceiros internacionais para oferecer peças originais e de alta performance com a procedência que o seu veículo merece.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Trabalhamos com BMW, Porsche, Land Rover, Mercedes-Benz, Volvo e Audi, entregando para todo o Brasil com agilidade e atendimento dedicado.
+              Trabalhamos com BMW, Porsche, Land Rover, Mercedes-Benz, Volvo, Audi, Mini e Jaguar, entregando para todo o Brasil com agilidade e atendimento dedicado.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-6">
               <div>
