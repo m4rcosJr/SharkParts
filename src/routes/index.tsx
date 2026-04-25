@@ -24,6 +24,8 @@ import landrover from "@/assets/brand-landrover.png";
 import mercedes from "@/assets/brand-mercedes.png";
 import volvo from "@/assets/brand-volvo.png";
 import audi from "@/assets/brand-audi.png";
+import mini from "@/assets/brand-mini.png";
+import jaguar from "@/assets/brand-jaguar.png";
 
 const WHATSAPP = "https://wa.me/5519988107422";
 
@@ -41,6 +43,8 @@ const brands = [
   { name: "Mercedes-Benz", logo: mercedes },
   { name: "Volvo", logo: volvo },
   { name: "Audi", logo: audi },
+  { name: "Mini", logo: mini },
+  { name: "Jaguar", logo: jaguar },
 ];
 
 const differentials = [
