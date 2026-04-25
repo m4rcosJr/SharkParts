@@ -192,7 +192,7 @@ function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+          <div className="mx-auto flex max-w-5xl flex-wrap justify-center gap-6">
             {brands.map((b, i) => (
               <motion.div
                 key={b.name}
@@ -200,7 +200,7 @@ function HomePage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group flex flex-col items-center justify-center rounded-2xl border border-border/60 bg-background/60 p-8 transition-all hover:border-primary/40 hover:bg-background"
+                className="group flex w-[calc(50%-0.75rem)] flex-col items-center justify-center rounded-2xl border border-border/60 bg-background/60 p-8 transition-all hover:border-primary/40 hover:bg-background lg:w-[calc(25%-1.125rem)]"
               >
                 <div className="flex h-28 w-28 items-center justify-center">
                   <img
