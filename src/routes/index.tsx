@@ -22,6 +22,8 @@ import bmw from "@/assets/brand-bmw.png";
 import porsche from "@/assets/brand-porsche.png";
 import landrover from "@/assets/brand-landrover.png";
 import mercedes from "@/assets/brand-mercedes.png";
+import volvo from "@/assets/brand-volvo.png";
+import audi from "@/assets/brand-audi.png";
 
 const WHATSAPP = "https://wa.me/5519988107422";
 
@@ -37,6 +39,8 @@ const brands = [
   { name: "Porsche", logo: porsche },
   { name: "Land Rover", logo: landrover },
   { name: "Mercedes-Benz", logo: mercedes },
+  { name: "Volvo", logo: volvo },
+  { name: "Audi", logo: audi },
 ];
 
 const differentials = [
@@ -56,9 +60,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Shark Parts — Peças Premium para Importados" },
-      { name: "description", content: "Peças originais e importadas para BMW, Porsche, Land Rover e Mercedes-Benz. Procedência garantida e entrega nacional." },
+      { name: "description", content: "Peças originais e importadas para BMW, Porsche, Land Rover, Mercedes-Benz, Volvo e Audi. Procedência garantida e entrega nacional." },
       { property: "og:title", content: "Shark Parts — Peças Premium para Importados" },
-      { property: "og:description", content: "Peças originais para BMW, Porsche, Land Rover e Mercedes-Benz." },
+      { property: "og:description", content: "Peças originais para BMW, Porsche, Land Rover, Mercedes-Benz, Volvo e Audi." },
     ],
   }),
   component: HomePage,
