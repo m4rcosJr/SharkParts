@@ -84,8 +84,20 @@ function HomePage() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!form.nome.trim() || !form.email.trim() || !form.mensagem.trim()) return;
-    const text = `Olá! Sou ${form.nome}.%0AEmail: ${form.email}%0AWhatsApp: ${form.whatsapp}%0A%0A${form.mensagem}`;
-    window.open(`https://wa.me/5519988107422?text=${text}`, "_blank");
+    const text = [
+      `Olá! Sou ${form.nome}.`,
+      `Email: ${form.email}`,
+      form.whatsapp ? `WhatsApp: ${form.whatsapp}` : null,
+      "",
+      form.mensagem,
+    ]
+      .filter(Boolean)
+      .join("\n");
+    window.open(
+      `https://wa.me/5519988107422?text=${encodeURIComponent(text)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
     setSent(true);
     setForm({ nome: "", email: "", whatsapp: "", mensagem: "" });
     setTimeout(() => setSent(false), 4000);
