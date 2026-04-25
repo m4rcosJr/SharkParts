@@ -11,6 +11,7 @@ import {
   MessageCircle,
   Star,
   ArrowRight,
+  Instagram,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import aboutImg from "@/assets/about-warehouse.jpg";
@@ -29,6 +30,7 @@ import jaguar from "@/assets/brand-jaguar.png";
 
 const WHATSAPP_PHONE = "5519988107422";
 const WHATSAPP = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}`;
+const INSTAGRAM_URL = "https://www.instagram.com/sharkparts__/";
 
 const services = [
   { img: brakes, title: "Sistema de Freios", desc: "Discos, pastilhas e pinças de alta performance para veículos premium." },
@@ -309,11 +311,11 @@ function HomePage() {
             </p>
             <div className="mt-8 grid grid-cols-3 gap-6">
               <div>
-                <div className="font-display text-3xl font-bold text-primary">10+</div>
+                <div className="font-display text-3xl font-bold text-primary">2+</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Anos no mercado</div>
               </div>
               <div>
-                <div className="font-display text-3xl font-bold text-primary">5k+</div>
+                <div className="font-display text-3xl font-bold text-primary">20k+</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Clientes</div>
               </div>
               <div>
@@ -392,6 +394,16 @@ function HomePage() {
                   <div className="font-display font-semibold text-foreground">WhatsApp</div>
                   <div className="text-sm text-muted-foreground">+55 19 98810-7422</div>
                   <div className="mt-1 text-xs text-primary">Resposta em minutos →</div>
+                </div>
+              </a>
+
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 rounded-2xl border border-border/60 bg-card p-6 transition-all hover:border-primary/40">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <Instagram className="h-6 w-6" />
+                </div>
+                <div>
+                  <div className="font-display font-semibold text-foreground">Instagram</div>
+                  <div className="text-sm text-muted-foreground">@sharkparts__</div>
                 </div>
               </a>
 
