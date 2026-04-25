@@ -105,7 +105,7 @@ function HomePage() {
               Peças <span className="text-primary">premium</span> para veículos importados
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Especialistas em BMW, Porsche, Land Rover e Mercedes-Benz. Atendimento personalizado e entrega para todo o Brasil.
+              Especialistas em BMW, Porsche, Land Rover, Mercedes-Benz, Volvo e Audi. Atendimento personalizado e entrega para todo o Brasil.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a
@@ -279,7 +279,7 @@ function HomePage() {
               A Shark Parts nasceu da paixão por carros importados. Reunimos uma equipe de especialistas e parceiros internacionais para oferecer peças originais e de alta performance com a procedência que o seu veículo merece.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Trabalhamos com BMW, Porsche, Land Rover e Mercedes-Benz, entregando para todo o Brasil com agilidade e atendimento dedicado.
+              Trabalhamos com BMW, Porsche, Land Rover, Mercedes-Benz, Volvo e Audi, entregando para todo o Brasil com agilidade e atendimento dedicado.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-6">
               <div>
