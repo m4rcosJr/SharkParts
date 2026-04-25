@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Mail, Phone, Instagram, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 
 const INSTAGRAM_URL = "https://www.instagram.com/sharkparts__/";
@@ -35,15 +36,27 @@ export function Footer() {
           <div>
             <h4 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-foreground">Contato</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>📧 sharkparts25@gmail.com</li>
-              <li>📱 +55 19 98810-7422</li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-primary" aria-hidden="true" />
+                <a href="mailto:sharkparts25@gmail.com" className="transition-colors hover:text-foreground">
+                  sharkparts25@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
+                <a href="tel:+5519988107422" className="transition-colors hover:text-foreground">
+                  +55 19 98810-7422
+                </a>
+              </li>
               <li className="pt-2">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:underline">
+                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
                   Falar no WhatsApp →
                 </a>
               </li>
               <li>
-                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-foreground">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 transition-colors hover:text-foreground">
+                  <Instagram className="h-4 w-4" aria-hidden="true" />
                   Instagram @sharkparts__
                 </a>
               </li>
