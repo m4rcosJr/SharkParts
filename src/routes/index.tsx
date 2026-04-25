@@ -72,6 +72,15 @@ function HomePage() {
   const [form, setForm] = useState({ nome: "", email: "", whatsapp: "", mensagem: "" });
   const [sent, setSent] = useState(false);
 
+  const formatWhatsapp = (value: string) => {
+    const digits = value.replace(/\D/g, "").slice(0, 11);
+    if (digits.length <= 2) return digits.length ? `(${digits}` : "";
+    if (digits.length <= 7) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    if (digits.length <= 10)
+      return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+    return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+  };
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!form.nome.trim() || !form.email.trim() || !form.mensagem.trim()) return;
