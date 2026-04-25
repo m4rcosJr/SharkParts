@@ -414,9 +414,10 @@ function HomePage() {
                     id="nome"
                     type="text"
                     required
+                    placeholder="Seu nome completo"
                     value={form.nome}
                     onChange={(e) => setForm({ ...form, nome: e.target.value })}
-                    className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-primary"
+                    className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary"
                   />
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -426,9 +427,12 @@ function HomePage() {
                       id="email"
                       type="email"
                       required
+                      placeholder="seuemail@exemplo.com"
+                      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                      title="Digite um e-mail válido (ex: nome@dominio.com)"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-primary"
+                      className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary"
                     />
                   </div>
                   <div>
@@ -436,9 +440,14 @@ function HomePage() {
                     <input
                       id="whatsapp"
                       type="tel"
+                      inputMode="numeric"
+                      placeholder="(11) 98765-4321"
+                      pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                      title="Digite no formato (DDD) 99999-9999"
+                      maxLength={15}
                       value={form.whatsapp}
-                      onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
-                      className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-primary"
+                      onChange={(e) => setForm({ ...form, whatsapp: formatWhatsapp(e.target.value) })}
+                      className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary"
                     />
                   </div>
                 </div>
@@ -448,9 +457,10 @@ function HomePage() {
                     id="mensagem"
                     required
                     rows={4}
+                    placeholder="Conte qual peça ou serviço você procura, marca e modelo do veículo..."
                     value={form.mensagem}
                     onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
-                    className="w-full resize-none rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-primary"
+                    className="w-full resize-none rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary"
                   />
                 </div>
                 <button
