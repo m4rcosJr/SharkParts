@@ -27,7 +27,8 @@ import audi from "@/assets/brand-audi.png";
 import mini from "@/assets/brand-mini.png";
 import jaguar from "@/assets/brand-jaguar.png";
 
-const WHATSAPP = "https://wa.me/5519988107422";
+const WHATSAPP_PHONE = "5519988107422";
+const WHATSAPP = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}`;
 
 const services = [
   { img: brakes, title: "Sistema de Freios", desc: "Discos, pastilhas e pinças de alta performance para veículos premium." },
@@ -97,11 +98,11 @@ function HomePage() {
     ]
       .filter(Boolean)
       .join("\n");
-    window.open(
-      `https://wa.me/5519988107422?text=${encodeURIComponent(text)}`,
-      "_blank",
-      "noopener,noreferrer",
-    );
+    const url = new URL("https://api.whatsapp.com/send");
+    url.searchParams.set("phone", WHATSAPP_PHONE);
+    url.searchParams.set("text", text);
+    const opened = window.open(url.toString(), "_blank");
+    if (!opened) window.location.href = url.toString();
     setSent(true);
     setForm({ nome: "", email: "", whatsapp: "", mensagem: "" });
     setTimeout(() => setSent(false), 4000);
